@@ -3,11 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stack - TraceLab</title>
+    <title>Linked List - TraceLab</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/topic.css">
 </head>
 <body>
-    <h1>Linked List Page</h1>
-    <p>This page will teach linked list operations.</p>
-    <a href="../index.html">Back to Home</a>
+    <div class="container">
+        <header class="topic-header">
+            <h1>Linked List</h1>
+            <p>
+                Learn how linked list operations work step by step by following the code
+                and the visual diagram together.
+            </p>
+            <a href="../index.html" class="back-link">← Back to Home</a>
+        </header>
+
+        <main class="learn-layout">
+            <section class="code-panel">
+                <h2>Code</h2>
+                <div class="code-box">
+    <pre><code>
+<div class="code-line" id="line1">Node* newNode = createNode(8);</div>
+<div class="code-line" id="line2">newNode->next = head;</div>
+<div class="code-line" id="line3">head = newNode;</div>
+    </code></pre>
+</div>
+            </section>
+
+            <section class="visual-panel">
+    <h2>Visual</h2>
+
+    <div class="linked-list-visual">
+        <div class="head-row">
+            <div class="pointer-label">head</div>
+            <div class="head-arrow" id="headArrow">↓</div>
+        </div>
+
+        <div class="new-node-area" id="newNodeArea"></div>
+
+        <div class="list-row" id="listRow"></div>
+    </div>
+</section>
+        </main>
+
+        <section class="explanation-panel">
+            <h2>Explanation</h2>
+            <p id="step-text">
+                This example shows insertion at the front of the linked list. A new node
+                is created, it points to the old head, and then head is updated.
+            </p>
+        </section>
+
+        <section class="controls">
+            <button id="prevBtn">Previous Step</button>
+            <button id="nextBtn">Next Step</button>
+        </section>
+    </div>
+
+    <script src="../js/structures/linkedlist.js"></script>
 </body>
 </html>
